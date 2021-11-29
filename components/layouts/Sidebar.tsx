@@ -5,7 +5,7 @@ interface IProps {
   children: ReactElement
 }
 
-export default function Sidebar({ children }: IProps): ReactElement {
+export default function Sidebar(page: ReactElement) {
   return (
     <div className="flex">
       <nav>
@@ -19,7 +19,7 @@ export default function Sidebar({ children }: IProps): ReactElement {
           <a>Contact</a>
         </Link>
       </nav>
-      <div className="content">{children}</div>
+      <div className="content">{page}</div>
     </div>
   )
 }

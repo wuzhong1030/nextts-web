@@ -1,11 +1,11 @@
-import type { ReactElement } from 'react'
+import type { ReactElement, ReactNode } from 'react'
 import Head from 'next/head'
 
 type LayoutProps = {
   children: ReactElement
 }
 
-export default function Layout({ children }: LayoutProps) {
+export default function Layout({ children }: LayoutProps): ReactElement {
   return (
     <>
       <Head>

@@ -1,25 +1,14 @@
-import { NextPage } from 'next'
-import Link from "next/link"
-import type { FunctionComponent, ReactElement, ReactNode } from 'react'
-import Sidebar from "../../components/layouts/Sidebar"
-
-interface IProps {
-  Layout: (page: ReactElement) => ReactElement
-}
-
-// type NextPageWithLayout = IProps & {
-//   getLayout?: (page: ReactElement) => ReactNode
-// }
-
-const ProfilePage: FunctionComponent<IProps> = (props): ReactElement => {
+import Link from 'next/link'
+import Sidebar from '@/components/layouts/Sidebar'
+import WechatLogin from '@/components/wechat/Login'
+export default function ProfilePage() {
   return (
     <div>
       <h2 className="text-lg">ProfilePage</h2>
       <Link href="/profile/setting">to setting</Link>
+      <WechatLogin />
     </div>
   )
 }
 
 ProfilePage.Layout = Sidebar
-
-export default ProfilePage
